@@ -1,93 +1,11 @@
-
-
 <!DOCTYPE html>
 <html lang="en">
 
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>My Website</title>
-  <style>
-    body {
-      margin: 0;
-      font-family: sans-serif;
-    }
-  
-    header {
-      position: fixed;
-      top: 0px;
-      left: 0px;
-      width: 100%;
-      background-color: #000000;
-    }
-  
-    nav ul {
-      list-style: none;
-      margin: 20px;
-      padding: 20px;
-      display: flex;
-    }
-  
-    nav li {
-      margin: 20px 10px;
-    }
-  
-    nav a {
-      display: clip;
-      padding: 10px;
-      color: #ffffff;
-      text-decoration: none;
-      font-weight: bold;
-    }
-  
-    nav a:hover {
-      background-color: #77d6ba;
-    }
-  
-    main {
-      padding-top: 50px;
-    }
-  
-    section {
-      height: 100vh;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      text-align: center;
-    }
-  
-    h2 {
-      font-size: 3rem;
-      margin-bottom: 20px;
-    }
-  
-    ul {
-      list-style: none;
-      margin: 20px;
-      padding: 20px;
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-    }
-  
-    li {
-      margin: 10px;
-      padding: 10px;
-      border: 1px solid #77d6ba;
-    }
-  
-    article {
-      margin: 20px;
-      padding: 20px;
-      background-color: #77d6ba;
-    }
-  
-    article h3 {
-      font-size: 2rem;
-      margin-bottom: 10px;
-    }
-  </style>
+  <title>James Dylan Denning</title>
+  <link rel="stylesheet" href="styles.css">
 </head>
 
 <body>
@@ -96,8 +14,9 @@
       <ul>
         <li><a href="#about" class="nav-link">About Me</a></li>
         <li><a href="#skills" class="nav-link">Skills</a></li>
-        <li><a href="#projects" class="nav-link">Projects</a></li>
+        <li><a href="#Jobs" class="nav-link">Projects</a></li>
         <li><a href="#education" class="nav-link">Education</a></li>
+        <li><a href="#work-experience" class="nav-link">Work Experince</a></li>
       </ul>
     </nav>
   </header>
@@ -105,21 +24,25 @@
   <main>
     <section id="about">
       <h2>About Me</h2>
-      <p>Here you can write a brief summary about yourself and your professional background.</p>
+      <p>
+        Preferred Contact: (803) 636-7793 | Email: dylandenning18@gmail.com
+        <br>
+        Columbia, South Carolina 29210
+      </p>
     </section>
 
     <section id="skills">
       <h2>Skills</h2>
       <ul>
-        <li>HTML</li>
-        <li>CSS</li>
-        <li>JavaScript</li>
-        <li>React</li>
-        <li>Node.js</li>
+        Programming Languages
+        <ul>
+          <li>Basic Java knowledge and application</li>
+          <li>Basic SQL knowledge and application</li>
+        </ul>
       </ul>
     </section>
 
-    <section id="projects">
+    <section id="Jobs">
       <h2>Projects</h2>
       <article>
         <h3>Project 1</h3>
@@ -132,45 +55,58 @@
     </section>
 
     <section id="education">
-      <h2>Education</h2>
-      <ul>
-        <li>Bachelor's Degree in Computer Science</li>
-        <li>Master's Degree in Software Engineering</li>
-      </ul>
+        <h2>Education</h2>
+        <ul>
+          <li>
+            University of South Carolina- Columbia, SC 29208
+            <br>
+            Sophomore | May 2025
+            <ul>
+              <li>Bachelor of Applied Science in Integrated Information Technology</li>
+              <li>GPA- 3.533</li>
+              <li>South Carolina LIFE Scholarship Recipient</li>
+              <li>National Society of Collegiate Scholars nominee</li>
+              <li>National Honors Society nominee</li>
+            </ul>
+          </li>
+        </ul>
+        
+        <h3>Related Coursework</h3>
+        <ul>
+          <li>Algorithmic Design</li>
+          <li>Business Communications</li>
+          <li>Computer Hardware and Software</li>
+          <li>Computing in the Modern World</li>
+          <li>Intro to Database Management Systems</li>
+          <li>Public Speaking</li>
+        </ul>
+      </section>
+
+    <section id="work-experience">
+      <h2>Work Experience</h2>
+      <article>
+        <h3>Embassy Suites Columbia, Columbia, South Carolina</h3>
+        <p>Front Desk Agent | Spring 2022 - Fall 2022</p>
+        <ul>
+          <li>Trained new employees on necessary functions of OnQ software.</li>
+          <li>Screened incoming flight transportation services online for company Shuttle Service.</li>
+          <li>Interacted and communicated with a diverse range of people of different backgrounds.</li>
+          <li>Maintained a professional environment while providing pragmatic customer service.</li>
+        </ul>
+      </article>
+      <article>
+        <h3>Frank’s Car Wash, Irmo, South Carolina</h3>
+        <p>Team member | Summer 2019 - Winter 2021</p>
+        <ul>
+          <li>Coordinated traffic of over 200 cars and assigned roles to team members for shift duties.</li>
+          <li>Operated POS system responsible for executing carwash procedures.</li>
+          <li>Facilitated transactions of average $2000 cash a day while keeping the cash till balanced.</li>
+        </ul>
+      </article>
     </section>
   </main>
 
-  <script>
-    const navLinks = document.querySelectorAll('.nav-link');
-
-    navLinks.forEach(link => {
-      link.addEventListener('click', event => {
-        event.preventDefault();
-        const sectionId = link.getAttribute('href');
-        document.querySelector(sectionId).scrollIntoView({ behavior: 'smooth' });
-      });
-    });
-
-    window.addEventListener('scroll', () => {
-      const sections = document.querySelectorAll('section');
-      const navItems = navLinks;
-      const currentScrollPos = window.pageYOffset;
-
-      sections.forEach(section => {
-        if (
-          section.offsetTop <= currentScrollPos &&
-          section.offsetTop + section.offsetHeight > currentScrollPos
-        ) {
-          navItems.forEach(link => {
-            link.classList.remove('active');
-            if (section.getAttribute('id') === link.getAttribute('href')) {
-              link.classList.add('active');
-            }
-          });
-        }
-      });
-    });
-  </script>
+  <script src="scripts.js"></script>
 </body>
 
 </html>
