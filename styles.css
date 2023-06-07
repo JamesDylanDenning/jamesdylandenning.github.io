@@ -100,7 +100,7 @@ article h3 {
 
   nav a {
     margin: 5px 0; /* Adjust spacing between links */
-    font-size: .5rem;
+    font-size: 1rem;
   }
 
   section {
@@ -118,7 +118,7 @@ article h3 {
   ul {
     justify-content: flex-start; /* Align list items to the left */
     margin-block: 0px;
-    font-size: 0.5rem;
+    font-size: 1rem;
   }
   
 }
