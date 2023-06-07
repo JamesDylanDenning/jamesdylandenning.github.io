@@ -141,6 +141,7 @@ article h3 {
 	max-width: 100%;
 	display: inline-block;
 	position: relative;
+ 
 }
 .hcg-slides {
 	width: 100%;
@@ -174,24 +175,25 @@ article h3 {
 }
 #hcg-slide-next {
 	right: 0;
-	border-radius: 3px 0 0 3px;
+	border-radius: 5px 0 0 5px;
 }
 #hcg-slide-prev {
 	left: 0;
-	border-radius: 0 3px 3px 0;
+	border-radius: 5px 5px 5px 5px;
 }
 #hcg-slide-prev:hover, #hcg-slide-next:hover {
 	background-color: #000c;
+ 
 }
 .hcg-slide-number {
-	color: #ffffff;
+	color: #e8e8e8;
 	font-size: 12px;
 	padding: 4px 7px;
 	position: absolute;
 	border-radius: 5px;
 	top: 5px;
 	left: 5px;
-	background-color: rgba(255,255,255,0.30);
+	background-color: hsla(0, 0%, 0%, 0.3);
 }
 /************CSS Animation***********/
 
@@ -215,8 +217,17 @@ article h3 {
 		transform: translateY(0);
 	}
 }
-.bounceInDown {
-	animation-name: bounceInDown;
+button {
+  background-color: #77d6ba;
+  color: black;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  font-size: 1rem;
+  cursor: pointer;
 }
 
-
+button:hover {
+  background-color: #6ac3a7;
+  color: white;
+}
