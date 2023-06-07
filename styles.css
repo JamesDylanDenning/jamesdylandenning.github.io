@@ -81,7 +81,7 @@ article {
 }
 
 article h3 {
-  font-size: 2rem;
+  font-size: 1.5rem;
   margin-bottom: 10px;
 }
 
@@ -94,13 +94,13 @@ article h3 {
     flex-direction: column;
     align-items: center;
     margin: -10px;
-    font-size: 1.5rem;
+    
    
   }
 
   nav a {
     margin: 5px 0; /* Adjust spacing between links */
-    
+    font-size: .5rem;
   }
 
   section {
