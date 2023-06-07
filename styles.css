@@ -93,22 +93,32 @@ article h3 {
     display: flex;
     flex-direction: column;
     align-items: center;
+    margin: -10px;
+    font-size: 1.5rem;
+   
   }
 
   nav a {
-    margin: 5px; /* Adjust spacing between links */
+    margin: 5px 0; /* Adjust spacing between links */
+    
   }
 
   section {
     height: auto; /* Remove fixed height to allow content to fit */
-    padding: 20px; /* Add padding for better readability */
+    padding: 10px;/* Add padding for better readability */
+    font-size: 1rem;
+    
   }
 
   h2 {
-    font-size: 2rem; /* Adjust heading font size */
+    font-size: 1.5rem; /* Adjust heading font size */
+  
   }
 
   ul {
     justify-content: flex-start; /* Align list items to the left */
+    margin-block: 0px;
+    font-size: 0.5rem;
   }
+  
 }
