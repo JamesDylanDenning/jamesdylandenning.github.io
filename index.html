@@ -1,0 +1,176 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My Website</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: sans-serif;
+    }
+  
+    header {
+      position: fixed;
+      top: 0px;
+      left: 0px;
+      width: 100%;
+      background-color: #000000;
+    }
+  
+    nav ul {
+      list-style: none;
+      margin: 20px;
+      padding: 20px;
+      display: flex;
+    }
+  
+    nav li {
+      margin: 20px 10px;
+    }
+  
+    nav a {
+      display: clip;
+      padding: 10px;
+      color: #ffffff;
+      text-decoration: none;
+      font-weight: bold;
+    }
+  
+    nav a:hover {
+      background-color: #77d6ba;
+    }
+  
+    main {
+      padding-top: 50px;
+    }
+  
+    section {
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+    }
+  
+    h2 {
+      font-size: 3rem;
+      margin-bottom: 20px;
+    }
+  
+    ul {
+      list-style: none;
+      margin: 20px;
+      padding: 20px;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+  
+    li {
+      margin: 10px;
+      padding: 10px;
+      border: 1px solid #77d6ba;
+    }
+  
+    article {
+      margin: 20px;
+      padding: 20px;
+      background-color: #77d6ba;
+    }
+  
+    article h3 {
+      font-size: 2rem;
+      margin-bottom: 10px;
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <nav>
+      <ul>
+        <li><a href="#about" class="nav-link">About Me</a></li>
+        <li><a href="#skills" class="nav-link">Skills</a></li>
+        <li><a href="#projects" class="nav-link">Projects</a></li>
+        <li><a href="#education" class="nav-link">Education</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section id="about">
+      <h2>About Me</h2>
+      <p>Here you can write a brief summary about yourself and your professional background.</p>
+    </section>
+
+    <section id="skills">
+      <h2>Skills</h2>
+      <ul>
+        <li>HTML</li>
+        <li>CSS</li>
+        <li>JavaScript</li>
+        <li>React</li>
+        <li>Node.js</li>
+      </ul>
+    </section>
+
+    <section id="projects">
+      <h2>Projects</h2>
+      <article>
+        <h3>Project 1</h3>
+        <p>Description of project 1</p>
+      </article>
+      <article>
+        <h3>Project 2</h3>
+        <p>Description of project 2</p>
+      </article>
+    </section>
+
+    <section id="education">
+      <h2>Education</h2>
+      <ul>
+        <li>Bachelor's Degree in Computer Science</li>
+        <li>Master's Degree in Software Engineering</li>
+      </ul>
+    </section>
+  </main>
+
+  <script>
+    const navLinks = document.querySelectorAll('.nav-link');
+
+    navLinks.forEach(link => {
+      link.addEventListener('click', event => {
+        event.preventDefault();
+        const sectionId = link.getAttribute('href');
+        document.querySelector(sectionId).scrollIntoView({ behavior: 'smooth' });
+      });
+    });
+
+    window.addEventListener('scroll', () => {
+      const sections = document.querySelectorAll('section');
+      const navItems = navLinks;
+      const currentScrollPos = window.pageYOffset;
+
+      sections.forEach(section => {
+        if (
+          section.offsetTop <= currentScrollPos &&
+          section.offsetTop + section.offsetHeight > currentScrollPos
+        ) {
+          navItems.forEach(link => {
+            link.classList.remove('active');
+            if (section.getAttribute('id') === link.getAttribute('href')) {
+              link.classList.add('active');
+            }
+          });
+        }
+      });
+    });
+  </script>
+</body>
+
+</html>
