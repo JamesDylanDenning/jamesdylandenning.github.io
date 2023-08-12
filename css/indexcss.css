@@ -2,11 +2,14 @@
  * Your custom CSS file
  *************************************************************************/
 
+
+
  .darkmode-button {
   position: fixed;
   top: 10px;
   right: 10px;  
   z-index: 9999;
+  cursor: pointer;
 }
 
 
@@ -48,7 +51,7 @@
 }
 
 .banner {
-  height: 100vh;
+
 
   background: 
     /* Create blurred ellipse */
@@ -69,7 +72,7 @@
   display: flex;
   justify-content: center;  
   align-items: center;
-  height: 100vh;
+height: 100vh;
   
   margin: 5px 0; /* Increased margin */
   
@@ -97,32 +100,24 @@ body.scrolled .content {
 }
 
 .banner h2 {
+  font-size: 3em; /* Increase the font size to 3em */
+  animation: fadeIn 1s ease-in-out; /* Add the animation rule */
+
+
   color: white;
   /* Add text shadow for readability */
   text-shadow: 1px 1px 2px #333; 
 }
 
-.banner, 
-.content {
-  transition: transform 0.5s ease; 
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
 }
 
-.banner {
-  transform: translateY(0);  
-}
-
-.content {
-  transform: translateY(100vh); 
-}
-
-/* When scrolled down, move banner up and show content */
-body.scrolled .banner {
-  transform: translateY(-100vh);
-}
-
-body.scrolled .content {
-  transform: translateY(0);
-}
 
 
 
@@ -224,7 +219,8 @@ body.scrolled .content {
 .text {
   margin: 10px 0; 
   padding: 0;
-  color: rgb(255, 255, 255); /* Text color */
+  color: #005cbf;  /* Text color */
+  text-align: center; 
 }
 
 .text-large-margin {
@@ -301,8 +297,10 @@ h3 {
   font-family: 'Open Sans', Helvetica, Arial, sans-serif;
 }
 
-body {
-  
+.body {
+  -ms-overflow-style: none; 
+  scrollbar-width: none;
+  overflow-y: scroll;  
   margin: 0;
   padding: 0;  
   background-color: #d4f4ff;
@@ -310,9 +308,14 @@ body {
   left: 0;
   right: 0;
   width: auto; 
+  
 
 }
 
+
+body::-webkit-scrollbar {
+  display: none;
+}
 .button-container {
   max-width: 400px; /* Width */
   margin: 0 auto; /* Center */  
@@ -331,6 +334,7 @@ body {
   padding: 14px 16px;
   text-decoration: none;
   font-size: 17px;
+  padding-left: 20px;
 }
 
 
@@ -374,6 +378,7 @@ body {
   background-color: inherit;
   font-family: inherit;
   margin: 0;
+padding-left: 20px;
 }
 
 .dropdown-content {
@@ -383,6 +388,8 @@ body {
   min-width: 160px;
   box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
   z-index: 1;
+  padding-left: 20px;
+  color: white;
 }
 
 .dropdown-content a {
@@ -392,8 +399,127 @@ body {
   text-decoration: none;
   display: block;
   text-align: left;  
+  
 }
 
 .topnav .dropdown:hover .dropdown-content {
   display: block;
+}
+/* Sidebar styling */
+
+.sidebar {
+  position: fixed;
+  top: 0;
+  left: -227px; /* Initially, keep it off the screen */
+  height: 75%;
+  width: 250px;
+  background-color: #005cbf;
+  overflow-x: hidden;
+  transition: 0.5s; /* Smooth transition effect */
+  padding-top: 20px;
+  z-index: 1000; /* Ensure it appears above other elements */
+  border-width: 2.5px;
+  border-color: #ffffff;
+border-style:dotted;
+}
+
+.arrow-indicator {
+  position: absolute;
+  right: -30px; /* Adjust based on the width of your arrow image */
+  top: 50%;
+  transform: translateY(-50%);
+  /* This makes sure the image stays vertically centered */
+
+
+}
+.arrow-indicator img {
+  width: 20px; /* adjust as needed */
+  height: 20px; /* maintain aspect ratio */
+  padding-right: 32px;
+}
+
+/* Hover effect to display the sidebar */
+.sidebar:hover {
+  left: 0;
+}
+
+
+.socials-logo{
+  padding: 20px;
+  font-size: 30px;
+  width: 30px;
+  text-align: center;
+  text-decoration: none;
+  border-radius: 50%;
+}
+.profile-picture{
+display: flex;
+  justify-content: center;
+  
+}
+.profile-picture img {
+  border-radius: 50%; /* Makes the image circular */
+  width: 80px; /* Adjust based on desired size */
+  height: 80px; /* Adjust based on desired size */
+  object-fit: cover; /* Ensures the image covers the dimensions without distortion */
+  
+
+}
+
+
+/* Styling for the personal information section inside the sidebar */
+.personal-info h3 {
+  color: white;
+  padding-left: 10px;
+}
+
+.personal-info p {
+  color: #818181;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+.socials-logos {
+  display: flex;
+  justify-content: center; /* Center children horizontally */
+  padding-top: 10px;
+}
+
+.socials-logos img {
+  width: 22px; /* Adjust based on desired size */
+  height: 22px; /* Adjust based on desired size */
+  margin: 0 5px; /* Space between images */
+  object-fit: cover; /* Ensures the image covers the dimensions without distortion */
+}
+.contact-me {
+  text-align: center; /* Center the text */
+  color: white; /* Set text color to white */
+  font-family: 'Open Sans', Helvetica, Arial, sans-serif; /* Use a clean and professional font */
+  font-weight: bold; /* Bold font weight */
+  font-size: 24px; /* Adjust based on desired size */
+  background-color: #005cbf; /* Optional: Adding a background color for better visibility of white text */
+  padding: 10px 20px; /* Optional: Adding some padding for better appearance */
+
+}
+.contact-me p {
+  margin: 5px 0; /* Reduced margin to bring lines closer together */
+}
+
+.contact-me p:first-child {
+  font-weight: bold; /* Bold font weight for the title */
+  font-size: 20px; /* Font size for the title */
+}
+
+.contact-me p:last-child {
+  font-weight: lighter; /* Lighter font weight for the number */
+  font-size: 24px; /* Font size for the number */
+}
+h4 {
+  color: white; /* Set text color to white */
+  font-family: 'Open Sans', Helvetica, Arial, sans-serif; /* Use a clean and professional font */
+  margin-top: 0px; /* Space from the profile picture above */
+  margin-bottom: 15px; /* Space for the social media icons below */
+  text-align: center; /* Center the text */
+  font-weight: 300; /* Lighter font weight for a sleek look */
+  font-size: 16px; /* Reduced font size */
+  letter-spacing: 1px; /* Add letter spacing for style */
 }
