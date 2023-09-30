@@ -1,147 +1,177 @@
-   
-   
-   <!doctype html>
-   <html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
 
-  
-   <head>
-    <link rel="icon" type="image/png" href="img/tablogo.png">
+    
+    <div id="welcome" class="section">
+        <div class="section-title">
+            <h1>Welcome</h1>
+        </div>
+        <div class="hidden-content">
+            <h2>Welcome to my portfolio</h2>
+            <p>Hello I am James Dylan Denning</p>
+            <p>I am pleased to present you my personal portfolio to showcase my acheivments and projects throughout my IT career.</p>
 
-    <title>Porfolio</title>
-
-   <link href="css/indexcss.css" media="screen" rel="stylesheet" type="text/css" />
-   <!-- Add icon library -->
-   <style>
-    .content {
-       transform: translateY(0);
-    }
- </style> 
-
-
-
-   
-
-    <div class="darkmode-button">
-        <img src="img/darkmode.png" alt="Dark Mode" onclick="window.location.href='Dindex.html'" width="20" height="20">
+        </div>
     </div>
- 
-
-
-
-    <!-- Top Nav -->
-    <div class="content-container">
-  
-      <div class="topnav">
-
-        <div class="dropdown">
-          <button class="dropbtn">  <a href="#" class="menu-icon">&#9776;</a></button>
-          <div class="dropdown-content">
-            <a href="Skills.html">Skills/Projects</a>
-             <a href="Education.html">Education</a> 
-           </div>
-        </div> 
-      
-      </div>
     
-    <!-- Sidebar -->
+    <div id="skills" class="section">
+        <div class="section-title">
+            <h1>Skills</h1>
+        </div>
+        <div class="hidden-content">
+            <!-- Card 1: CompTIA A+ -->
+            <div class="card">
+                <img src="img/ComTIA-A.jpg" alt="Project Image">
+                <div class="card-content">
+                    <h2>CompTIA A+</h2>
+                    <p>July 2023.</p>
+                </div>
+                <div class="card-overlay">
+                    <h2>Comptia A+</h2>
+                    <p>
+                        The CompTIA A+ exam is a globally recognized certification...
+                        <!-- truncated for brevity -->
+                    </p>
+                    <div class="card-links">
+                        <a href="https://www.comptia.org/certifications/a">CompTIA A+ info</a>
+                        <a href="pdf/ComptiaCertpdf.pdf" target="_blank">Certificate</a>
+                    </div>
+                </div>
+            </div>
+            <!-- Card 2: GitHub Repo -->
+            <div class="card">
+                <img src="img/GitHub-Logo.png" alt="Project Image">
+                <div class="card-content">
+                    <h2>GitHub Repo</h2>
+                    <p>Website code</p>
+                </div>
+                <div class="card-overlay">
+                    <h2>Github Repo</h2>
+                    <p>
+                        GitHub that allows developers to track and manage their work...
+                        <!-- truncated for brevity -->
+                    </p>
+                    <div class="card-links">
+                        <a href="https://github.com/JamesDylanDenning/jamesdylandenning.github.io">My Repo</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
     
-  
+    
+    <div id="education" class="section">
+        <div class="section-title">
+            <h1>Education</h1>
+        </div>        <div class="hidden-content">
+            <!-- School Details -->
+            <div class="details-box">
 
+                <h2>School Details</h2>
+                <p>Columbia, SC 29208 | May 2025</p>
+                <p>Bachelor of Science in <a href="https://sc.edu/study/colleges_schools/engineering_and_computing/study/integrated_information_technology/index.php">Integrated Information Technology</a></p>
+                <p>GPA- 3.744</p>
+            </div>
+            <hr class="details-divider">
 
- 
-    
-
-  <!-- Button to toggle the sidebar -->
-  
-    
-   <!-------------------------------------------------------------------------------------------->
-    <!--Start Header-->
-    
-    <div class="banner">
-    
-
-     
-        <div class="banner-table flex-column">
-          <div class="flex-row">
-            <div class="flex-item flex-column">
-              <h2 class="add-top-margin-small">Welcome to my Portfolio</h2>
-              <p class="text">
-                I am James Dylan Denning, an aspiring IT professional. I created this webpage using Github Pages, Github templates and previous WebDev expereince to showacase my technical achievements and projects. 
-              </p>
-           
+            <!-- School Accomplishments -->
+            <div class="details-box">
+                <h2>School Accomplishments</h2>
+                <p>South Carolina LIFE Scholarship</p>
+                <p><a href="pdf/Denning, J. D. Spring 2023 President's List.pdf" target="_blank">A Honor Roll Deans List 2023</a></p>
+                <p>UofSC National Society of Collegiate Scholars nominee</p>
+                <p>UofSC National Honors Society nominee</p>
             </div>
 
-          </div>
+           
+
+
         </div>
-      </div>
-      <!--End Header-->
-      <!-------------------------------------------------------------------------------------------->
-      <div class = "sidebar"> 
-        <div class = "sidebar-content">
-        <h4>Social Tab</h4>
-<div class="profile-picture">
-  <img src="img/headshot.jpg" alt="Your Name"> <!-- Replace path_to_your_image.jpg with the path to your image -->
-</div>
-
-<div class="socials-logos">
-
-<a href="https://www.linkedin.com/in/dylan-denning-a67939232/" target="_blank">
-  <img src="img/linkinicon.png" alt="Linked In Icon"></img>
-</a>
-
-
-
-<a href="mailto:dylan@jamesdylandenning.com" target="_blank">
-<img src="img/outlookicon.png" alt="Linked In Icon"></img>
-</a>
-
-</div>
-
-<div class="contact-me">
-<p>Contact me</p>
-  <p>(803)636-7793</p>
-  <p2>Dylan@JamesDylanDenning.com</p2>
-  <!-- Add more paragraphs or elements as needed -->
-</div>
-<div class="arrow-indicator">
-<img src="img/right arrow.png" alt="Expand Sidebar">
-</div>
-      
+    </div>
+    
+    <div id="contact" class="section">
+        <div class="section-title">
+            <h1>Contact</h1>
+        </div>        
+        <div class="hidden-content">
+            <!-- Contact Info -->
+            <div class="contact-me">
+                <p>Contact me</p>
+                <p>(803)636-7793</p>
+                <p2>Dylan@JamesDylanDenning.com</p2>
+            </div>
+            <!-- Profile Picture -->
+            <div class="profile-picture">
+                <img src="img/headshot.jpg" alt="Your Name">
+            </div>
+            <!-- Social Media Links -->
+            <div class="socials-logos">
+                <a href="https://www.linkedin.com/in/dylan-denning-a67939232/" target="_blank" class="tooltip">
+                  <img src="img/linkinicon.png" alt="Linked In Icon">
+                  <span class="tooltiptext">Go to my LinkedIn</span>
+                </a>
+                <a href="mailto:dylan@jamesdylandenning.com" target="_blank" class="tooltip">
+                  <img src="img/outlookicon.png" alt="Email Icon">
+                  <span class="tooltiptext">Send Email</span>
+                </a>
+              </div>
         </div>
-      
-      
-      </div>
+    </div>
 
-      <div class="content">
-        <div class="content-table flex-column">
-  
-  
-  
-   <!--Start Text Only-->
-   <div class="flex-row">
-    <div class="flex-item flex-column">
-      
-      <h2 id="text-only">Purpose</h2>
-      <hr>
-      <p class="purpose-text">
-        This website serves as a professional portfolio where I can showcase my projects, achievements, and skills as I progress through my degree and prepare for internships and job opportunities in the field of information technology.
-      </p>
-      
-      <p class="purpose-text">
-        As I work towards completing my degree, this website provides a centralized platform to document and present my projects and accomplishments. It serves as a repository for my work, allowing potential employers and collaborators to explore my technical expertise and problem-solving abilities.
-      </p>
-      
-      <p class="purpose-text">
-        By featuring my projects on this website, I can demonstrate my practical application of Information Technology principles. Each project represents a tangible example of my ability to conceptualize, plan, and execute IT solutions. It also showcases my adaptability to different technologies and my capacity to deliver high-quality results.
-      </p>
-      
-      <p class="purpose-text">
-        Moreover, this website serves as a testament to my dedication to continuous learning and professional growth. It allows me to highlight my academic achievements, such as my CompTIA A+ certification and relevant college coursework, emphasizing my commitment to staying current with industry standards and expanding my knowledge base.
-      </p>
+</body>
 
-      
-      <script src="js/index.js"></script>
+<script>
+// Step 1: Toggle the visibility of .hidden-content when .section is clicked
+document.querySelectorAll('.section').forEach(function(section) {
+    section.addEventListener('click', function(event) {
+        // Prevent the click from being propagated to the document
+        event.stopPropagation();
 
-    </body>
+        const content = this.querySelector('.hidden-content');
 
-    </html>
+        // Step 4: Hide all other .hidden-content divs
+        document.querySelectorAll('.hidden-content').forEach(function(innerContent) {
+            if (innerContent !== content) { // Don't hide the current section's content
+                innerContent.style.opacity = "0";
+                setTimeout(() => {
+                    innerContent.style.display = "none";
+                }, 300);
+            }
+        });
+
+        // Toggle the visibility of the current .hidden-content
+        if (content.style.display === "none" || content.style.display === "") {
+            content.style.display = "block";
+            setTimeout(() => {
+                content.style.opacity = "1";
+            }, 50);
+        } else {
+            content.style.opacity = "0";
+            setTimeout(() => {
+                content.style.display = "none";
+            }, 300);
+        }
+    });
+});
+
+// Step 2: Close .hidden-content when clicking outside
+document.addEventListener('click', function() {
+    document.querySelectorAll('.hidden-content').forEach(function(content) {
+        content.style.opacity = "0";
+        setTimeout(() => {
+            content.style.display = "none";
+        }, 300);
+    });
+});
+
+
+</script>
+
+</html>
