@@ -1,0 +1,328 @@
+html{
+    background-color: #333;
+
+}
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;  /* Evenly distributes space around the child elements */
+    height: auto;
+    min-height: 100vh;
+}
+
+.section {
+    flex: 1;
+    width: 80%;  /* Width of the section. You can adjust as per requirement. */
+    margin: 1% 0;  /* Margin between sections and to the top and bottom of the page. */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    transition: background-color 0.3s;
+    border-radius: 25px;  /* Rounded corners */
+    padding: 1% 2%;
+    cursor: pointer;  /* Add this line */
+    color: White;
+
+    
+
+}
+.section:last-child {
+    margin-bottom: 2%;
+}
+
+.section-title {
+    display: inline-flex;  /* Changed from flex to inline-flex */
+    justify-content: center;
+    align-items: center;
+    border-radius: 25px;
+    transition: background-color 0.3s, color 0.3s;
+    cursor: pointer;
+    padding: 10px 20px;  /* Added padding around the text */
+    margin: 0 auto;  /* Center the inline-flex box if needed */
+}
+
+/* Colors for each section title */
+
+
+
+
+#welcome {
+    background: linear-gradient(to bottom, #c4c0f7, #9089f5);
+}
+
+#skills {
+    background: linear-gradient(to bottom, #9089f5, #564dcf);
+}
+
+#education {
+    background: linear-gradient(to bottom, #564dcf, #352e96);
+}
+
+#contact {
+    background: linear-gradient(to bottom, #352e96, #161158);
+}
+
+.section-title h1 {
+    transition: color 0.3s ease-in-out;
+}
+
+/* Specific colors for each section's h1 */
+#welcome .section-title h1 {
+    color: #ffffff;
+}
+
+#skills .section-title h1 {
+    color: #ffffff;
+}
+
+#education .section-title h1 {
+    color: #ffffff;
+}
+
+#contact .section-title h1 {
+    color: #ffffff;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.hidden-content {
+    display: none;
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+
+
+/* Styles for the hidden content in the 'welcome' section */
+#welcome .hidden-content p {
+    font-size: 20px;
+  margin-bottom: 20px;
+  color: #ffffff;  /* Light Purple */
+  text-align: center;
+  font-family: Arial, sans-serif; /* Consistent font */
+
+}
+#welcome .hidden-content h2 {
+    font-size: 36px;
+  margin-bottom: 20px;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+  color: #352e96;  /* Light Purple */
+  text-align: center;
+  font-family: Arial, sans-serif; /* Consistent font */
+margin-top: auto
+  
+
+}
+
+
+
+
+.card {
+    position: relative;
+    height: auto; 
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    border-radius: 15px;
+    overflow: hidden;
+    background-color: #f6f6f6; /* gives a subtle background color to the card */
+    display: flex; /* adjusts to a flex layout */
+    align-items: center; /* aligns items vertically center */
+    flex-wrap: nowrap; /* Ensures content doesn't wrap below the image */
+    overflow: hidden;  /* Ensures content doesn't spill out */
+    width: 95%; /* Adjust the width to be a percentage of its container */
+    max-width: 600px; /* Prevents the card from becoming overly wide on large screens */
+    margin: 15px 2.5%;
+}
+
+.card img {
+    width: 150px; /* constrains the width */
+    height: auto;
+    margin: 15px; /* gives some margin around the image */
+    border-radius: 10px; /* makes the image corners slightly rounded */
+    flex-shrink: 0; /* Prevents the image from shrinking */
+
+}
+.card-content {
+    color: #352e96;
+}
+
+
+.card-content, .card-overlay {
+    flex: 1; /* takes up remaining space after the image */
+    padding: 15px;
+   
+}
+
+.card-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0,0,0,0.75);
+    color: white;
+    opacity: 0;
+    transition: opacity 0.3s;
+    pointer-events: none;
+    height: auto;
+    position: relative; /* Change from absolute to relative */
+
+   
+}
+
+.card:hover .card-overlay {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+.card-links {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 15px;
+    font-size: 0.9em; /* slightly reduces the font size for the links */
+}
+
+.card-links a {
+    color: #00f;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.card-links a:hover {
+    color: #ff4500; /* changes color on hover for a subtle effect */
+}
+
+.details-box {
+  flex: 1;
+  padding: 20px;
+  margin: 15px 0;
+  text-align: center;
+  font-family: Arial, sans-serif; /* Consistent font */
+  line-height: 1.6;  /* Improved spacing */
+}
+
+/* Style for the headers */
+.details-box h2 {
+  font-size: 36px;
+  margin-bottom: 20px;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+  color: #ffffff;  /* Light Purple */
+}
+
+/* Style for the paragraphs */
+.details-box p {
+  font-size: 20px;
+  margin-bottom: 20px;
+  color: #decffa;  /* Light Purple */
+}
+
+/* Style for the links */
+.details-box a {
+  color: #decffa;  /* Light Purple */
+  text-decoration: underline;
+}
+
+/* Hover effect for the links */
+.details-box a:hover {
+  text-decoration: underline;
+  color: #ff0000;  /* Red */
+}
+
+.details-divider {
+  width: 80%;  /* Adjust as needed */
+  margin: 20px auto;  /* Center the line and add space above and below */
+  border: 0;  /* Remove default border */
+  height: 1px;  /* Set height */
+  background: #b19cd9;  /* Light Purple to match text */
+}
+
+.contact-me {
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 20px;
+
+}
+
+.profile-picture img {
+    width: 35%;
+    border-radius: 50%;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    margin: 20px auto;
+    display: block;
+}
+
+.socials-logos {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.socials-logos img {
+    width: 40px;
+    height: 40px;
+    transition: transform 0.3s;
+}
+
+.socials-logos img:hover {
+    transform: scale(1.1);
+}
+/* Tooltip container */
+.tooltip {
+  position: relative;
+  display: inline-block;
+}
+
+/* Tooltip text */
+.tooltip .tooltiptext {
+  visibility: hidden;
+  width: 120px;
+  background-color: #555;
+  color: #fff;
+  text-align: center;
+  border-radius: 6px;
+  padding: 5px;
+  position: absolute;
+  z-index: 1;
+  bottom: 100%;  /* Position the tooltip above the icon */
+  left: 50%;
+  margin-left: -60px; /* Center the tooltip */
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+
+/* Tooltip arrow */
+.tooltip .tooltiptext::after {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  margin-left: -5px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: #555 transparent transparent transparent;
+}
+
+/* Show tooltip text when hovering */
+.tooltip:hover .tooltiptext {
+  visibility: visible;
+  opacity: 1;
+}
+
+
+
+
