@@ -121,7 +121,7 @@ body {
   padding-right: 10%;
 }
 #welcome .hidden-content h2 {
-    font-size: 36px;
+    font-size: 30px;
   margin-bottom: 20px;
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
   color: #352e96;  /* Light Purple */
@@ -245,7 +245,7 @@ margin-top: auto
 /* Hover effect for the links */
 .details-box a:hover {
   text-decoration: underline;
-  color: #ff0000;  /* Red */
+  color: #ff000085;  /* Red */
 }
 
 .details-divider {
