@@ -198,6 +198,9 @@ margin-top: auto
     margin-top: 15px;
     font-size: 0.9em; /* slightly reduces the font size for the links */
 }
+.card a:hover {
+    color: red;
+}
 
 
 
