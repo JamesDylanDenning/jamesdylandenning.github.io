@@ -114,17 +114,18 @@ body {
 #welcome .hidden-content p {
     font-size: 20px;
   margin-bottom: 20px;
-  color: #ffffff;  /* Light Purple */
+  color: #ffffff;  
   text-align: center;
   font-family: Arial, sans-serif; /* Consistent font */
   padding-left: 10%;
   padding-right: 10%;
+  
 }
 #welcome .hidden-content h2 {
-    font-size: 30px;
+    font-size: 40px;
   margin-bottom: 20px;
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
-  color: #352e96;  /* Light Purple */
+  color: #352e96;  
   text-align: center;
   font-family: Arial, sans-serif; /* Consistent font */
 margin-top: auto
@@ -172,19 +173,20 @@ margin-top: auto
 
 .card-overlay {
     position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
+ 
     background: rgba(0,0,0,0.75);
     color: white;
     opacity: 0;
     transition: opacity 0.3s;
     pointer-events: none;
-    height: auto;
+    height: 100%;
     position: relative; /* Change from absolute to relative */
 
    
+}
+.card-overlay p {
+    padding: 10px;
+
 }
 
 .card:hover .card-overlay {
@@ -205,7 +207,7 @@ margin-top: auto
 
 
 .card-links a {
-    color: #564dcf;
+    color: #bab5f0;
     text-decoration: underline;
     transition: color 0.3s;
     text-align: center;
@@ -269,7 +271,8 @@ margin-top: auto
 }
 
 .profile-picture img {
-    width: 35%;
+    width: 20%;
+    height: 20%;
     border-radius: 50%;
     box-shadow: 0 4px 8px rgba(0,0,0,0.1);
     margin: 20px auto;
@@ -280,11 +283,12 @@ margin-top: auto
     display: flex;
     justify-content: center;
     gap: 20px;
+  
 }
 
 .socials-logos img {
-    width: 40px;
-    height: 40px;
+    max-height: 60px;
+    max-width: 60px;
     transition: transform 0.3s;
 }
 
@@ -334,5 +338,39 @@ margin-top: auto
 }
 
 
+@media (max-width: 768px) {
+    .card {
+        width: 85%; /* Increase the width for smaller screens */
+        flex-direction: column; /* Stack the elements vertically */
+        align-items: center; /* Center-align the items */
+        padding-left: 10px;
+        padding-right: 10px;
+    }
 
+    .card img {
+        width: 60%; /* Adjust the image width */
+        margin-bottom: 15px; /* Add space below the image */
+    }
+
+    .card-content, .card-overlay {
+        padding: 10px; /* Reduce padding for smaller screens */
+    }
+
+    .section {
+        width: 90%; /* Make section wider to use more screen space */
+        padding: 2% 3%; /* Adjust padding */
+    }
+    .card-overlay {
+        width: 100%;
+
+    }
+    .profile-picture img{
+        height: 30%;
+        width: 30%;
+    }
+    
+        
+
+    
+}
 
